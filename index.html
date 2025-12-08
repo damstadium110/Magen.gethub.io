@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magen Dental Supplies - Professional Dental Equipment & Supplies</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="user_input_files/magen.png" alt="Magen Dental Supplies" class="logo-img">
+            </div>
+            <div class="nav-controls">
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="en">English</button>
+                    <button class="lang-btn" data-lang="ar">العربية</button>
+                    <button class="lang-btn" data-lang="he">עברית</button>
+                </div>
+                <button class="quote-btn" id="viewQuoteBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="quote-text" data-en="View Quote" data-ar="عرض العرض" data-he="צפייה בהצעת המחיר">View Quote</span>
+                    <span class="quote-count" id="quoteCount">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title" 
+                    data-en="Precision Supplies for Modern Dentistry" 
+                    data-ar="مستلزمات دقيقة لطب الأسنان الحديث" 
+                    data-he="ציוד מדויק לרפואת שיניים מודרנית">
+                    Precision Supplies for Modern Dentistry
+                </h1>
+                <p class="hero-subtitle" 
+                   data-en="Professional dental equipment and supplies for clinics and care centers across Palestine"
+                   data-ar="معدات ومستلزمات الأسنان المهنية للعيادات ومراكز الرعاية في فلسطين"
+                   data-he="ציוד ומוצרי שיניים מקצועיים למרפאות ומרכזי טיפול ברחבי ישראל">
+                    Professional dental equipment and supplies for clinics and care centers across Palestine
+                </p>
+                <button class="cta-button" onclick="scrollToProducts()">
+                    <span data-en="Browse Catalog" data-ar="تصفح الكتالوج" data-he="עיון בקטלוג">Browse Catalog</span>
+                    <i class="fas fa-arrow-down"></i>
+                </button>
+            </div>
+            <div class="hero-image">
+                <img src="images/dental-clinic-hero.jpg" alt="Modern Dental Clinic" class="hero-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Catalog Section -->
+    <section class="catalog" id="catalog">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" 
+                    data-en="Our Products" 
+                    data-ar="منتجاتنا" 
+                    data-he="המוצרים שלנו">
+                    Our Products
+                </h2>
+                <p class="section-subtitle" 
+                   data-en="Browse our selection of professional dental supplies"
+                   data-ar="تصفح مجموعتنا من مستلزمات الأسنان المهنية"
+                   data-he="עיינו במגוון מוצרי השיניים המקצועיים שלנו">
+                    Browse our selection of professional dental supplies
+                </p>
+            </div>
+
+            <!-- Category Filters -->
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="all">
+                    <span data-en="All Products" data-ar="جميع المنتجات" data-he="כל המוצרים">All Products</span>
+                </button>
+                <button class="filter-btn" data-category="instruments">
+                    <span data-en="Instruments" data-ar="الأدوات" data-he="כלים">Instruments</span>
+                </button>
+                <button class="filter-btn" data-category="consumables">
+                    <span data-en="Consumables" data-ar="المواد الاستهلاكية" data-he="צריכה">Consumables</span>
+                </button>
+                <button class="filter-btn" data-category="equipment">
+                    <span data-en="Equipment" data-ar="المعدات" data-he="ציוד">Equipment</span>
+                </button>
+                <button class="filter-btn" data-category="sterilization">
+                    <span data-en="Sterilization" data-ar="التعقيم" data-he="עיקור">Sterilization</span>
+                </button>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="product-grid" id="productGrid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="about-title" 
+                        data-en="About Magen Dental Supplies" 
+                        data-ar="عن ماجين لطب الأسنان" 
+                        data-he="על מגן ציוד שיניים">
+                        About Magen Dental Supplies
+                    </h2>
+                    <p class="about-description" 
+                       data-en="We are a trusted supplier of professional dental equipment and consumables, serving dental clinics and care centers throughout Palestine. Our commitment to quality and reliability makes us the preferred partner for dental professionals who demand excellence."
+                       data-ar="نحن مورد موثوق للمعدات والمواد الاستهلاكية المهنية لطب الأسنان،,我们 نخدم العيادات ومراكز الرعاية في جميع أنحاء فلسطين. التزامنا بالجودة والموثوقية يجعلنا الشريك المفضل للمهنيين في طب الأسنان الذين يطالبون بالتميز."
+                       data-he="אנחו ספק אמין של ציוד שיניים מקצועי ומוצרי צריכה, המשרת מרפאות שיניים ומרכזי טיפול ברחבי ישראל. המחויבות שלנו לאיכות ואמינות הופכת אותנו לשותף המועדף על אנשי מקצוע ברפואת השיניים הדורשים מצוינות.">
+                        We are a trusted supplier of professional dental equipment and consumables, serving dental clinics and care centers throughout Palestine. Our commitment to quality and reliability makes us the preferred partner for dental professionals who demand excellence.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="https://drive.google.com/file/d/1dCY_i6uZ7J4cEZbHDS84tX7u8l8Kb34c/view?usp=sharing" alt="Professional Dental Team" class="about-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2 class="contact-title" 
+                data-en="Contact Information" 
+                data-ar="معلومات الاتصال" 
+                data-he="פרטי יצירת קשר">
+                Contact Information
+            </h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h3 data-en="Phone" data-ar="الهاتف" data-he="טלפון">Phone</h3>
+                        <p>+970 59 123 4567</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3 data-en="Email" data-ar="البريد الإلكتروني" data-he="אימייל">Email</h3>
+                        <p>info@magendental.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3 data-en="Location" data-ar="الموقع" data-he="מיקום">Location</h3>
+                        <p data-en="Ramallah, Palestine" data-ar="رام الله، فلسطين" data-he="רמאללה, פלסטין">Ramallah, Palestine</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="user_input_files/magen.png" alt="Magen Dental Supplies" class="footer-logo-img">
+                </div>
+                <div class="footer-text">
+                    <p data-en="&copy; 2025 Magen Dental Supplies. All rights reserved. | Cash on Delivery Available"
+                       data-ar="&copy; 2025 ماجين لطب الأسنان. جميع الحقوق محفوظة. | الدفع عند التوفر"
+                       data-he="&copy; 2025 מגן ציוד שיניים. כל הזכויות שמורות. | תשלום במזומן בעת קבלה">
+                        &copy; 2025 Magen Dental Supplies. All rights reserved. | Cash on Delivery Available
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quote Request Sidebar -->
+    <div class="quote-sidebar" id="quoteSidebar">
+        <div class="quote-header">
+            <h3 data-en="Quote Request" data-ar="طلب عرض سعر" data-he="בקשת הצעת מחיר">Quote Request</h3>
+            <button class="close-btn" id="closeQuote">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="quote-body" id="quoteBody">
+            <div class="empty-cart" id="emptyCart">
+                <i class="fas fa-shopping-cart"></i>
+                <p data-en="Your quote request is empty" data-ar="طلب عرض السعر فارغ" data-he="בקשת הצעת המחיר שלך ריקה">Your quote request is empty</p>
+                <p data-en="Add products to get started" data-ar="أضف المنتجات للبدء" data-he="הוסף מוצרים להתחלה">Add products to get started</p>
+            </div>
+        </div>
+        <div class="quote-footer" id="quoteFooter">
+            <div class="quote-summary">
+                <span class="total-items" id="totalItems">0 items</span>
+            </div>
+            <button class="request-quote-btn" id="requestQuoteBtn">
+                <i class="fas fa-file-invoice"></i>
+                <span data-en="Request Quote via Form" data-ar="طلب عرض سعر عبر النموذج" data-he="בקשת הצעת מחיר דרך טופס">Request Quote via Form</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/970591234567" class="whatsapp-float" target="_blank" id="whatsappBtn">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="scripts/app.js"></script>
+</body>
+</html>
