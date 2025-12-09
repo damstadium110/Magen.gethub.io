@@ -183,7 +183,7 @@ const products = [
 ];
 
 // Global State
-let currentLanguage = 'ar';
+let currentLanguage = 'en';
 let cart = [];
 let currentCategory = 'all';
 
@@ -203,11 +203,10 @@ const elements = {
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', function() {
-  setLanguage('ar');
   initializeEventListeners();
   renderProducts();
   updateCartDisplay();
-  setLanguage('ar');
+  setLanguage('en');
 });
 
 // Event Listeners
