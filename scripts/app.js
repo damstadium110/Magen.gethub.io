@@ -317,7 +317,7 @@ function createProductCard(product) {
     
     <button class="add-to-quote-btn" onclick="addToCart(${product.id})">
       <i class="fas fa-plus"></i>
-      <span data-en="Add to Quote" data-ar="أضف إلى العرض" data-he="הוסף להצעה">Add to Quote</span>
+      <span data-en="Add to Quote" data-ar="أضف إلى السلة" data-he="הוסף להצעה">Add to Quote</span>
     </button>
   `;
 
