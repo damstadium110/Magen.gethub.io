@@ -3,16 +3,16 @@ const products = [
   {
     id: 1,
     name: {
-      en: "Digital Dental X-Ray Sensor",
-      ar: "جهاز تصوير الأسنان الرقمي",
-      he: "חיישן צילום שיניים דיגיטלי"
+      en: "Disposable Medical Gown",
+      ar: "ثوب طبي للاستخدام مرة واحدة",
+      he: "שמלה רפואית חד פעמית"
     },
     category: "equipment",
-    image: "images/digital-xray-sensor.jpg",
+    image: "images/disposable_medical_gown.jpg",
     description: {
-      en: "High-resolution digital X-ray sensor for precise dental imaging",
-      ar: "جهاز تصوير أشعة سينية رقمي عالي الدقة لتصوير الأسنان بدقة",
-      he: "חיישן צילום שיניים דיגיטלי ברזולוציה גבוהה לצילום מדויק"
+      en: "Blue PPE Gowns Disposable",
+      ar: "أردية الوقاية الشخصية بوليبروبيلين الزرقاء للاستخدام مرة واحدة",
+      he: "ארכיון תווים מפוליפרופילן כחול לשימוש חד פעמי"
     }
   },
   {
