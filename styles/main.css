@@ -91,7 +91,7 @@ html[dir="rtl"] body {
 }
 
 .nav-logo .logo-img {
-  height: 115px;
+  height: 128px;
   width: auto;
 }
 
@@ -525,7 +525,7 @@ html[dir="rtl"] body {
 }
 
 .footer-logo-img {
-  height: 48px;
+  height: 256px;
   width: auto;
   filter: brightness(0) invert(1);
 }
