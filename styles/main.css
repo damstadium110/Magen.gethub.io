@@ -87,7 +87,7 @@ html[dir="rtl"] body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 120%;
+  width: 160%;
 }
 
 .nav-logo .logo-img {
